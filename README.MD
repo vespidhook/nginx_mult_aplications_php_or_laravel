@@ -1,12 +1,10 @@
-# README
+# 🚀 NGINX PHP-FPM Configuration for Multiple Applications
 
-## NGINX PHP-FPM Configuration for Multiple Applications
+This repository contains the NGINX configuration for hosting multiple PHP applications on a single server using the wyveo/nginx-php-fpm Docker image with PHP 8.2. 🐳
 
-This repository contains the NGINX configuration for hosting multiple PHP applications on a single server using the wyveo/nginx-php-fpm Docker image with PHP 8.2.
+## 🛠️ Configuration Details
 
-### Configuration Details
-
-#### NGINX Configuration
+### 🌐 NGINX Configuration
 
 The NGINX configuration is set up to listen on port 80 and handle multiple PHP applications, each located in a subdirectory. Key features include:
 
@@ -16,7 +14,7 @@ The NGINX configuration is set up to listen on port 80 and handle multiple PHP a
 - Denying access to hidden files and directories.
 - Custom error pages for favicon.ico and robots.txt.
 
-#### PHP Application Configuration
+### 📁 PHP Application Configuration
 
 The configuration includes settings for three PHP applications (`app1`, `app2`, and `app3`). Each application block consists of:
 
@@ -24,7 +22,7 @@ The configuration includes settings for three PHP applications (`app1`, `app2`, 
 - Attempt to serve static files directly, falling back to the application's index.php if not found.
 - Configuration for handling PHP files, forwarding requests to the PHP-FPM socket.
 
-#### Dockerfile
+### 🐋 Dockerfile
 
 The Dockerfile is based on the wyveo/nginx-php-fpm image with PHP 8.2. It includes:
 
@@ -32,19 +30,19 @@ The Dockerfile is based on the wyveo/nginx-php-fpm image with PHP 8.2. It includ
 - Creating necessary directories for NGINX logs and web applications.
 - Setting appropriate permissions for the web server to access directories.
 
-### Usage
+## 🚀 Usage
 
 1. Ensure Docker is installed on your system.
 2. Clone this repository:
 
     ```bash
-    git clone https://github.com/yourusername/your-repo.git
+    git clone https://github.com/vespidhook/nginx_mult_aplications_php_or_laravel.git
     ```
 
 3. Navigate to the repository:
 
     ```bash
-    cd your-repo
+    cd nginx_mult_aplications_php_or_laravel
     ```
 
 4. Build the Docker image:
@@ -61,18 +59,18 @@ The Dockerfile is based on the wyveo/nginx-php-fpm image with PHP 8.2. It includ
 
 Replace `your-username`, `your-repo`, `your-image-name`, and `your-container-name` with appropriate values.
 
-### Customization
+## 🛠️ Customization
 
 Feel free to customize the NGINX configuration (`default.conf`) or add more PHP applications following the established pattern.
 
-### Important Note
+## ⚠️ Important Note
 
 This configuration is intended for development or educational purposes. For production use, consider enhancing security measures and adapting configurations based on specific requirements.
 
-### Credits
+## 🙌 Credits
 
 This NGINX PHP-FPM configuration is based on the wyveo/nginx-php-fpm image (PHP 8.2). Visit [wyveo/nginx-php-fpm](https://github.com/wyveo/nginx-php-fpm) for more information about the base image.
 
-### License
+## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 📜
